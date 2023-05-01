@@ -1,0 +1,16 @@
+v: 0
+micros:
+  - name: main
+    src: src
+    engine: nodejs16
+    dev: nodemon index.js
+    run: "node index.js"
+    presets:
+      env:
+        - name: DISCORD_WEBHOOK
+    actions:
+      - id: "fetch"
+        name: "fetch"
+        description: "fetches hotdeal data from telegram channel."
+        trigger: "schedule"
+        default_interval: "2 minute"
