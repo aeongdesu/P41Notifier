@@ -1,13 +1,16 @@
 v: 0
+icon: icon.png
 micros:
   - name: main
-    src: src
+    src: ./
     engine: nodejs16
-    dev: nodemon index.js
-    run: "node index.js"
+    primary: true
+    dev: nodemon src/index.js
+    run: "node src/index.js"
     presets:
       env:
         - name: DISCORD_WEBHOOK
+        - name: MENTION_ID
     actions:
       - id: "fetch"
         name: "fetch"
