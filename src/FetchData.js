@@ -1,6 +1,6 @@
 import fetch from "node-fetch"
 
-const PREVIEW_URL = "https://t.me/s/hotdeal_kr?q=p41+1tb"
+const PREVIEW_URL = "https://t.me/s/hotdeal_kr?q=p41"
 
 // horror
 const lastHotdeal = /<a class="tgme_widget_message_inline_button url_button" href="(.*)<\/span>/g
