@@ -1,5 +1,4 @@
-import * as dotenv from "dotenv"
-const env = dotenv.config()
+import "dotenv/config"
 
 import express from "express"
 const app = express()
@@ -12,8 +11,8 @@ const deta = new Deta()
 const db = deta.Base("P41Notifier")
 
 const port = process.env.PORT
-const webhook_url = process.env.DISCORD_WEBHOOK || env.parsed?.DISCORD_WEBHOOK
-const mention = process.env.MENTION_ID || env.parsed?.MENTION_ID
+const webhook_url = process.env.DISCORD_WEBHOOK
+const mention = process.env.MENTION_ID
 
 app.get("/", (req, res) => {
     res.send({ repo: "https://github.com/aeongdesu/P41Notifier", path: "/latest" })
